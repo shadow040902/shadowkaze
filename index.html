@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <video class="background" autoplay loop muted playsinline>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/at7h5w0uy6z5s1zx5wks9/Untitled-video-Made-with-Clipchamp.mp4?rlkey=ii320bkqedlri0n2a1b4q5go6&st=muy83dbp" type="video/mp4">
+  </video>
+  <div class="profile-card">
+    <img class="avatar" src="avatar.jpg" alt="avatar">
+    <h1 class="username">shadow.kaze.69</h1>
+    <p class="quote">"Nhìn con cak"</p>
+    
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="views"><i class="far fa-eye"></i> </div>
+  </div>
+  <div class="music-player">
+    <div class="music-info">
+      <i class="fas fa-music"></i>
+      <span class="song-title">"HIGHEST"</span>
+    </div>
+    <audio id="bg-music" controls autoplay muted>
+      <source src="HIGHEST.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <script>
+    // Tự động phát nhạc khi trang tải xong
+    window.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('bg-music');
+      audio.volume = 0.7;
+      audio.muted = false; // Bỏ mute sau khi play để nghe được nhạc
+      audio.play().catch(() => {});
+    });
+  </script>
+</body>
+</html>
